@@ -105,7 +105,9 @@ export function collectRequestHandler(request: Request, env: Env) {
             "Cache-Control": "no-cache",
             Pragma: "no-cache",
             "Last-Modified": new Date().toUTCString(),
-            Tk: "N", // not tracking
+            Tk: "N", // not tracking,
+            "Access-Control-Allow-Origin": "*",
+            "Access-Control-Allow-Methods": "GET, OPTIONS",
         },
         status: 200,
     });
